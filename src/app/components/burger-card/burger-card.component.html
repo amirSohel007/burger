@@ -1,0 +1,26 @@
+<div class="search-filter mb-5">
+    <label for="">Search Burgers</label>
+    <input type="text" placeholder="Search by Burger name" [(ngModel)]="search" class="form-control">
+</div>
+
+<div class="row">
+    <div class="col-sm-4" *ngFor="let burger of burgers | myfilter:search">
+        <div class="restaurent-card mb-4 position-relative">
+            <span class="badge badge-success">{{burger.type}}</span>
+            <div class="img-wrapper position-relative">
+                <h3 class="restaurent-title">{{burger.name}}</h3>
+                <ul class="raiting p-0 m-0 list-unstyled d-flex">
+                  <span>{{burger.raiting}}</span>
+                </ul>
+                <img class="w-100" [src]=burger.photograph alt="image">
+            </div>
+            <div class="restaurent-info p-3 position-relative">
+                <p>₹ {{burger.price}}</p>
+                <button data-toggle="modal" data-target="#exampleModal">Confirm Order</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12" *ngIf="burgers && burgers.length === 0">No result found for this filter</div>
+</div>
+
+<app-modal></app-modal>

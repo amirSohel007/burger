@@ -1,0 +1,36 @@
+<app-banner></app-banner>
+
+<!--main content-->
+<section class="mb-5 mt-5 pb-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="filter-group form-group">
+                            <label>Sort By Raiting</label>
+                            <select class="form-control" (change)="filterByRaiting($event)">
+                                <option *ngFor="let star of raiting" value="{{star}}">{{star}}</option>
+                            </select>
+                        </div>
+                        <div class="filter-group form-group">
+                            <label>Sort By Category</label>
+                            <select class="form-control" (change)="filterByCategory($event)">
+                                <option *ngFor="let cat of catergory" value="{{cat}}">{{cat}}</option>
+                            </select>
+                        </div>
+                        <div class="filter-group form-group">
+                            <label>Sort By Price</label>
+                            <select class="form-control" (change)="filterByPrice($event)">
+                                <option *ngFor="let amount of price" value="{{amount}}">{{amount}}</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-9">
+                <app-burger-card [burgers]=filterItem></app-burger-card>
+            </div>
+        </div>
+    </div>
+</section>

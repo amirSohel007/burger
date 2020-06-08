@@ -1,0 +1,343 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&family=Sen&display=swap&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;600;700&family=Jost:wght@300;400&display=swap');
+/* font-family: 'Nunito', sans-serif; */
+
+body {background: #F9FBFD;  font-family: 'Sen', sans-serif;}
+/* body {font-family: 'Jost', sans-serif;} */
+h1,h2,h3,h4,h5,label {font-family: 'Comfortaa', cursive;}
+label {
+    font-size: 14px;
+    color: #252525;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 49px;
+    margin-bottom: 15px;}
+
+    p {
+        font-family: 'Comfortaa', cursive;
+    }
+
+ .header-banner {
+    background-image: url('https://b.zmtcdn.com/web_assets/81f3ff974d82520780078ba1cfbd453a1583259680.png');
+    min-height: 350px;
+    width: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    color: #fff;
+    background-position: right 0px;
+}
+
+.search-filter input {
+    border-radius: 1px;
+    min-height: 46px;
+    font-size: 13px;
+    font-family: 'Comfortaa', cursive;
+    color: #231b1b;
+}
+
+.logo img {
+    width: 130px;
+}
+
+
+.filter-group h3 {
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+.filter-group .form-control{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0;
+    min-height: 44px;
+    border: solid 1px #dedede;
+}
+
+
+
+.filter-group .form-control:focus, .search-filter input:focus{
+    outline: none !important;
+    box-shadow: 0 0 0 !important;
+}
+
+.restaurent-title {
+    position: absolute;
+    bottom: 10px;
+    z-index: 9;
+    color: #fff;
+    font-size: 17px;
+    left: 15px;
+}
+
+.img-wrapper {
+    border-top-left-radius: 4px;
+    overflow: hidden;
+    border-top-right-radius: 4px;
+}
+
+.location {
+    font-size: 15px !important;
+    margin-bottom: 4px !important;
+    color: #000 !important;
+}
+
+.restaurent-info p {
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    color: #2d2f35;
+}
+
+.restaurent-info {
+    border: solid 1px #efefef;
+    box-shadow: 0px 0px 2px rgba(0,0,0,0.1);
+}
+
+.img-wrapper::after {
+    position: absolute;
+    content: '';
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1e5799+0,2989d8+50,207cca+51,7db9e8+100;Blue+Gloss+Default */
+background: #1e5799; /* Old browsers */
+background: -moz-linear-gradient(to bottom,  #08080805 1%,#0c0c0cd6 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(to bottom,  #08080805 1%,#0c0c0cd6 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #08080805 1%,#0c0c0cd6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+}
+
+.raiting span {
+    display: block;
+    text-align: center;
+    width: 100%;
+    line-height: 31px;
+    font-size: 14px;
+}
+
+.raiting {
+    position: absolute;
+    bottom: 40px;
+    right: 16px;
+    color: #ffffff;
+    z-index: 9;
+    background: url('assets/img/star.png');
+    background-size: 30px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+
+.raiting li {
+    margin-right: 5px;
+}
+
+footer {
+    background: #292929;
+    padding: 20px 0;
+    text-align: center;
+    color: #fff;
+}
+
+.price {
+    font-family: 'Jost', sans-serif;
+    font-size: 15px !important;
+    color: #020202 !important;
+    font-weight: 600;
+}
+
+.badge {
+    position: absolute;
+    top: 10px;
+    z-index: 9;
+    right: 10px;
+    font-family: 'Comfortaa', cursive;
+    border-radius: 2px;
+}
+
+.badge-success {
+    background-color: #FF5722;
+}
+
+
+select {
+    background: url(https://cdn.iconscout.com/icon/free/png-256/down-arrow-16-460295.png) no-repeat;
+    background-size: 24px;
+    background-position: right 7px;
+    color: #313131;
+    cursor: pointer;
+}
+
+.heart {
+    width: 18px;
+    position: relative;
+    top: -2px;
+}
+
+.save-restro {
+    font-family: 'Comfortaa', cursive;
+    display: inline-block;
+    font-size: 13px;
+   cursor: pointer;
+}
+
+.add-fav {
+    position: absolute;
+    right: 20px;
+    top: 12px;
+    width: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.add-fav {
+    color: #F44336;
+}
+
+.fa {
+    display: block;
+}
+
+#fav-restro {
+    background: #fff;
+    color: #000;
+    max-width: 240px;
+    width: 380px;
+    position: absolute;
+    right: 0;
+    top: 20px;
+    border-radius: 2px;
+    transition: all 0.2s;
+    z-index: 99;
+    transform: translateY(20px);
+    visibility: hidden;
+    opacity: 0;
+    margin-top: 15px !important;
+    max-height: 250px;
+    overflow: auto;
+}
+
+#fav-restro li {
+    padding: 7px 15px;
+    font-size: 12px;
+    font-family: 'Comfortaa', cursive;
+}
+
+#fav-restro li img {
+    width: 30px;
+    object-fit: cover;
+    margin-right: 6px;
+}
+
+.drodown-list button:hover + #fav-restro, #fav-restro:hover {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+}
+
+.drodown-list button {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-family: 'Comfortaa', cursive;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+span.count {
+    background: #fff;
+    color: #000;
+    display: inline-block;
+    font-size: 11px;
+    border-radius: 30px;
+    position: relative;
+    top: -5px;
+    padding: 1px;
+    min-width: 17px;
+    max-height: 18px;
+}
+
+#fav-restro::-webkit-scrollbar {
+   width: 6px;;
+  }
+   
+  #fav-restro::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+   
+  #fav-restro::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+  }
+
+
+  button {
+    border: none;
+    background: #ef3908;
+    color: #fff;
+    border-radius: 3px;
+    padding: 6px 7px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+button:hover {
+    background: #ca3813;
+}
+
+button:focus {
+outline: none;
+}
+
+.text-15{
+    font-size: 15px;
+}
+
+.text-13 {font-size: 13px;}
+
+.close {
+    position: absolute;
+    right: 10px;
+    top: 6px;
+    background: #e4e4e4 !important;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    opacity: 1;
+    z-index: 999;
+}
+
+.close span {
+    position: relative;
+    top: -1px;
+}
+
+.scooter {
+    width: 70px;
+    margin: auto;
+    display: block;
+    margin-bottom: 20px;
+}
+
+@media (min-width:767px){
+    .modal-dialog {
+        margin-top: 7% !important;
+    }
+}
+
+@media (max-width:767px){
+    h1 {
+        font-size: 32px;
+    }
+
+    .header-banner p {
+        font-size: 14px;
+        line-height: 28px;
+    }
+}
