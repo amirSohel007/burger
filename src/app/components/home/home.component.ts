@@ -9,13 +9,15 @@ import { BurgerService } from 'src/services/burgers';
 export class HomeComponent implements OnInit {
   burgersList: any;
   filterItem: any;
-  catergory = ["All", "Italian", "Veg", "Kashmiri", "Chiness", "Indian", "Non-veg"]
-  raiting = ["All", 1, 2, 3, 4, 5]
-  price = ["All", 100, 150, 200, 250, 300, 350, 400, 450, 500, 600]
+  catergory = ["All","Italian","Veg","Kashmiri","Chiness","Indian","Non-veg"];
+  rating = ["All", 1, 2, 3, 4, 5];
+  price = ["All", 100, 150, 200, 250, 300, 350, 400, 450, 500, 600];
 
   constructor(private burger: BurgerService) {}
 
-  ngOnInit(): void {this.getBurgers()}
+  ngOnInit() {
+    this.getBurgers();
+  }
 
   getBurgers() {
     this.burger.getBurgers().subscribe((burgers) => {
@@ -24,24 +26,20 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  filterByCategory(e) {
-    if (e.target.value == "All") this.filterItem = this.burgersList;
-    else {
-    const filterCategory = this.burgersList.filter((item) => item.type === e.target.value);
-    this.filterItem = filterCategory}
+  commonFilter(e, type) {
+    let value = e.target.value;
+    if (value == "All") this.filterItem = this.burgersList;
+    let checkType = type === "raiting" ? "raiting" : "type";
+    let checkDataType = type === "raiting" ? parseInt(value) : value;
+    const filterItem = this.burgersList.filter((item) => item[checkType] === checkDataType);
+    this.filterItem = filterItem;
   }
 
-  filterByRaiting(e) {
-    if (e.target.value == "All") this.filterItem = this.burgersList;
-    else {
-    const filterRaiting = this.burgersList.filter((item) => item.raiting === parseInt(e.target.value));
-    this.filterItem = filterRaiting;}
-  }
-
-  filterByPrice(e){
+  filterByPrice(e) {
     if (e.target.value == "All") this.filterItem = this.burgersList;
     else {
     const filterPrice = this.burgersList.filter((item) => item.price < parseInt(e.target.value));
-    this.filterItem = filterPrice}
+    this.filterItem = filterPrice;
+    }
   }
 }

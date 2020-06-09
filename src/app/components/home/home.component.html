@@ -8,15 +8,15 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="filter-group form-group">
-                            <label>Sort By Raiting</label>
-                            <select class="form-control" (change)="filterByRaiting($event)">
-                                <option *ngFor="let star of raiting" value="{{star}}">{{star}}</option>
+                            <label>Sort By Rating</label>
+                            <select class="form-control" (change)="commonFilter($event, 'raiting')">
+                                <option *ngFor="let star of rating" [value]="star">{{star}}</option>
                             </select>
                         </div>
                         <div class="filter-group form-group">
                             <label>Sort By Category</label>
-                            <select class="form-control" (change)="filterByCategory($event)">
-                                <option *ngFor="let cat of catergory" value="{{cat}}">{{cat}}</option>
+                            <select class="form-control" (change)="commonFilter($event, 'category')">
+                                <option *ngFor="let cat of catergory" [value]="cat">{{cat}}</option>
                             </select>
                         </div>
                         <div class="filter-group form-group">
